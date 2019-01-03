@@ -26,5 +26,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "description": "Ariana Grande concert ticketing app",
+  "main": "index.js",
+  "repository": "https://github.com/bpaq9/the-venue/tree/master/the-venue-app",
+  "author": "Ben Paquin",
+  "license": "MIT"
 }
