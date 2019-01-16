@@ -6,12 +6,12 @@ import TicketIcon from '../../resources/images/icons/ticket.png';
 const MyButton = (props) => {
     return (
             <Button
-                href="https://www.arianagrande.com/events"
+                href={props.link}
                 variant="contained"
                 size="small"
                 style={{
-                    background: 'red',
-                    color: 'white'
+                    background: props.bck,
+                    color: props.color
                 }}
             >
                 <img 
@@ -19,7 +19,7 @@ const MyButton = (props) => {
                 className ="iconImage"
                 alt="icon_button"
                 />
-                Tickets
+                {props.text}
             </Button>
     );
 };
