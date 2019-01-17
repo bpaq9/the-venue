@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MyButton from '../Utils/MyButton';
 
 class Pricing extends Component {
 
@@ -13,13 +14,29 @@ class Pricing extends Component {
         linkto:['http://sales/b', 'http://sales/ll', 'http://sales/vip']
     }
 
-    showBoxes = () => {
-        return (
-            <div>
-            hello
-        </div>
+    showBoxes = () => (
+        this.state.prices.map((box,i)=>(
+            <div className="pricing_item">
+                <div className="pricing_inner_wrapper">
+                    <div className="pricing_title">
+                        <span>{box[i]}</span>
+                        <span>{this.state.positions[i]}</span>
+                    </div>
+                    <div className="pricing_description">
+                    <span>{this.state.desc[i]}</span>
+                    </div>
+                    <div className="pricing_buttons">
+                        <MyButton 
+                            text="Purchase"
+                            bck="#ffa800"
+                            color="#ffffff"
+                            link={this.state.linkto[i]}
+                        />
+                    </div>
+                </div>
+            </div>
         )
-    }
+        ))
 
     render() {
         return (
