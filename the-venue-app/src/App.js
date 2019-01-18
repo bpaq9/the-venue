@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './resources/styles.css'
+import { Element } from 'react-scroll'
 
 import Header from './components/header_footer/Header.js';
 import Featured from './components/Featured/';
@@ -14,11 +15,21 @@ class App extends Component {
     return (
       <div className="App" style={{ height: "1500px"}}>
         <Header/>
-        <Featured/>
-        <VenueNFO/>
-        <Highlights/>
-        <Pricing/>
-        <Location/>
+        <Element name="Featured">
+          <Featured/>
+        </Element>
+        <Element name="Venue Info">
+          <VenueNFO/>
+        </Element>
+        <Element name="Highlights">
+          <Highlights/>
+        </Element>
+        <Element name="Pricing">
+          <Pricing/>
+        </Element>
+        <Element name="Location">
+          <Location/>
+        </Element>
         <Footer/>
       </div>
     );
